@@ -8,6 +8,6 @@ namespace FrendlyWeather.APIServices.Contracts
 {
     public interface IGoogleServiceAPI
     {
-        Task<GoogleResponse> GetTimezoneName(float lon, float lat, int dt);
+        Task<GoogleResponse> GetTimezoneNameAsync(float lon, float lat, int dt);
     }
 }

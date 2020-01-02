@@ -8,6 +8,6 @@ namespace FrendlyWeather.APIServices.Contracts
 {
     public interface IOpenWeatherMapAPIService
     {
-        Task<OpenWeatherResponse> GetWeatherForLocation(string zip);
+        Task<OpenWeatherResponse> GetWeatherForLocationAsync(string zip);
     }
 }

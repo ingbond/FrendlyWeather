@@ -19,7 +19,7 @@ namespace FrendlyWeather.APIServices
             _configuration = configuration;
         }
 
-        public async Task<GoogleResponse> GetTimezoneName(float lat, float lon, int dt)
+        public async Task<GoogleResponse> GetTimezoneNameAsync(float lat, float lon, int dt)
         {
             var key = _configuration.GetSection("Google").GetSection("GoogleApiKey").Value;
             var latStr = lat.ToString(System.Globalization.CultureInfo.InvariantCulture);

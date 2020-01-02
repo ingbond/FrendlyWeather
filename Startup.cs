@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using FrendlyWeather.APIServices;
 using FrendlyWeather.APIServices.Contracts;
+using FrendlyWeather.Services;
+using FrendlyWeather.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +33,7 @@ namespace FrendlyWeather
 
             services.AddScoped<IOpenWeatherMapAPIService, OpenWeatherMapAPIService>();
             services.AddScoped<IGoogleServiceAPI, GoogleServiceAPI>();
+            services.AddScoped<IWeatherService, WeatherService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

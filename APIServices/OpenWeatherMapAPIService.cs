@@ -19,7 +19,7 @@ namespace FrendlyWeather.APIServices
             _configuration = configuration;
         }
 
-        public async Task<OpenWeatherResponse> GetWeatherForLocation(string zip)
+        public async Task<OpenWeatherResponse> GetWeatherForLocationAsync(string zip)
         {
             var key = _configuration.GetSection("Weather").GetSection("WeatherApiKey").Value;
             using (var client = new HttpClient())
