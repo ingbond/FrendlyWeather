@@ -23,7 +23,7 @@ namespace FrendlyWeather.Services
         {
             var resultWeather = await _weatherMapApi.GetWeatherForLocationAsync(zip);
             var resultGoogle =
-                await _googleServiceApi.GetTimezoneNameAsync(resultWeather.Coord.Lat + 10, resultWeather.Coord.Lon, resultWeather.Dt);
+                await _googleServiceApi.GetTimezoneNameAsync(resultWeather.Coord.Lat, resultWeather.Coord.Lon, resultWeather.Dt);
 
             if (resultWeather.Name == null || resultGoogle.TimeZoneId == null)
             {

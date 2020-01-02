@@ -26,7 +26,7 @@ namespace FrendlyWeather.Controllers
         {
             try
             {
-                var result = _weatherService.GetFrendlyWeatherAsync(zip);
+                var result = await _weatherService.GetFrendlyWeatherAsync(zip);
 
                 return Ok(result);
             }
